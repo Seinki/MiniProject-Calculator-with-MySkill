@@ -20,9 +20,7 @@ numbers.forEach((number) => {
   number.addEventListener("click", (e) => {
     if (e.target.innerText === "." && !haveDot) {
       haveDot = true;
-      console.log(e.target.innerText);
     } else if (e.target.innerText === "." && haveDot) {
-      console.log("sudah ada ", e.target.innerText);
       return;
     }
     disInput += e.target.innerText;
@@ -37,7 +35,6 @@ operations.forEach((operation) => {
     haveDot = false;
     const operationName = e.target.innerText;
     if (disInput && disHistory && lastOperation) {
-      console.log("Menjalankan operasi math");
       mathOperation();
     } else {
       result = parseFloat(disInput);
